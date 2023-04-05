@@ -1,13 +1,12 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Sentiments on Safe Injection"
+subtitle: "Analysis of Multi-Level Government Content"
 author: 
-  - First author
-  - Another author
+  - Finn Korol
 thanks: "Code and data are available at: LINK."
 date: "`r Sys.time()`"
 date-format: "D MMMM YYYY"
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "This paper evaluates the bias of government websites regarding safe injection sites using sentiment analysis. We analyzed website content and identified patterns of sentiment, categorizing them as positive, negative, or neutral. Our findings show varying degrees of bias, with some sites presenting a positive sentiment and others a negative sentiment, using emotionally charged language and negative framing. Biased information can influence public perception and policy decisions, highlighting the importance of accurate and unbiased information. We recommend that government websites provide unbiased information to promote informed decision-making and reduce harm caused by opioid addiction."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -25,7 +24,13 @@ library(palmerpenguins)
 
 # Introduction
 
-You can and should cross-reference sections and sub-sections. For instance, @sec-data and @sec-first-point. 
+In recent years, there has been a growing awareness of the public health crisis associated with the opioid epidemic in North America. One approach to mitigate the harm caused by opioid addiction is the establishment of safe injection sites, which provide a medically supervised environment for individuals to use drugs. These sites have been shown to reduce the risk of overdose, decrease the transmission of infectious diseases, and connect individuals with healthcare and social services. Despite their proven effectiveness, safe injection sites remain a controversial and politicized topic in many jurisdictions.
+
+Government websites are a primary source of information for citizens seeking information about safe injection sites. However, it is unclear whether these websites provide unbiased and accurate information. This paper aims to evaluate the bias of government websites regarding safe injection sites using natural language processing techniques, primarily through sentiment analysis.
+
+The use of natural language processing in analyzing text data has become increasingly popular in recent years due to its ability to quickly and accurately process large amounts of text data. Sentiment analysis, in particular, is a widely used method for identifying the underlying emotional tone of text, which can be used to evaluate the positivity or negativity of a particular message or viewpoint. In the context of government websites, sentiment analysis can help identify whether the content is presented in a positive, negative, or neutral manner.
+
+By analyzing the sentiment of government website content related to safe injection sites, this paper aims to shed light on the potential biases that may exist in the information presented to the public. Such biases can have a significant impact on public perception and policy decisions regarding safe injection sites. Therefore, understanding the extent of bias in government websites is essential for informed decision-making and public health policy.
 
 
 
