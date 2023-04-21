@@ -1,12 +1,11 @@
 #### Preamble ####
-# Purpose: Simulates... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Data: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Simulating what our data would look like... just lots of words! let's generate some random strings, shall we?
+# Author: Finn Korol
+# Date: 20 April 2023
+# Contact: finn.korol@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
-
+# 
 
 #### Workspace setup ####
 #The desired data will be 3 character string variables each containing all the text from their respective level of government's webscraped sites containing only words (i.e no punctuation or numbers).  
