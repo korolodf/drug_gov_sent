@@ -1,12 +1,12 @@
 ---
-title: "Information Shared by Municipal Governments"
-subtitle: "Analysis of Multi-Level Government Content"
+title: "Toronto Resources on Supervised Consumption Services Offer the Most Comprehensive Information for the Public"
+subtitle: "Analysis of Multi-Level Government Content using Topic Modelling"
 author: 
   - Finn Korol
 thanks: "Code and data are available at: https://github.com/korolodf/drug_gov_sent."
 date: "`r Sys.time()`"
 date-format: "D MMMM YYYY"
-abstract: "This paper evaluates the bias of government websites regarding safe injection sites using sentiment analysis. We analyzed website content and identified patterns of sentiment, categorizing them as positive, negative, or neutral. Our findings show varying degrees of bias, with some sites presenting a positive sentiment and others a negative sentiment, using emotionally charged language and negative framing. Biased information can influence public perception and policy decisions, highlighting the importance of accurate and unbiased information. We recommend that government websites provide unbiased information to promote informed decision-making and reduce harm caused by opioid addiction."
+abstract: "This paper evaluates content on government websites regarding supervised consumption sites using topic modelling. Website content was used to train three models optimized using quantitative metrics. Topics were analyed based on the number of topics discussed and their contents. In this work, a general lack of information was identified to be problematic, however at the City of Toronto level, the most comprehensive resources were available. I recommend that government websites, particularly at the Ontario level, provide more comprehensive information to promote informed decision-making and reduce drug-related harms."
 format: pdf
 table-of-contents: true
 number-sections: true
@@ -30,21 +30,30 @@ library(knitr)
 
 # Introduction
 
-In recent years, there has been a growing awareness of the public health crisis associated with the opioid epidemic in North America. One approach to mitigate the harm caused by opioid addiction is the establishment of safe injection sites, which provide a medically supervised environment for individuals to use drugs. These sites have been shown to reduce the risk of overdose, decrease the transmission of infectious diseases, and connect individuals with healthcare and social services. Despite their proven effectiveness, safe injection sites remain a controversial and politicized topic in many jurisdictions.
+There has been a growing awareness of the public health crisis associated with the opioid epidemic in Canada. One approach adopted by Canada has been to mitigate harm caused by controlled substance abuse. Through harm-reduction, Canada acknowledges that drug-abuse happens, but by making it safer through the development of supports, there are many practical benefits [@canada_2023]. One of the most focused upon branches of harm reduction is the establishment of supervised consumption sites (SCS), which provide a medically supervised environment for individuals to use drugs through inhalatian, injection or oral administration. These sites have been shown to reduce the risk of overdose, decrease the transmission of infectious diseases, connect individuals with healthcare and social services and lessen the damage caused by drug-related organized crime. Moreover, SCS make communities more safe by providing a secure place for the disposal of drug paraphernalia, such as needles. Despite their proven effectiveness, SCS remain a controversial and politicized topic in many jurisdictions [@ziegler_2019].
 
-Government websites are a primary source of information for citizens seeking information about safe injection sites. However, it is unclear whether these websites provide unbiased and accurate information. This paper aims to evaluate the bias of government websites regarding safe injection sites using natural language processing techniques, primarily through sentiment analysis.
+Government websites are a primary source of information for citizens seeking information about SCS, as they are government regulated. However, it is unclear whether these websites provide unbiased information, and the depth of the information provided across levels. This paper aims to evaluate the information offered on these government websites regarding SCS using natural language processing techniques, primarily through topic modelling.
 
-Due to the varying influence of each level of government on the creation and facilitation of safe injection sites, content from governments at the municipal, provincial and federal levels will be studied. These will be the government of Canada, province of Ontario, and the city of Toronto. While the war on drugs has had a substantial impact on culture of the entire North American continent, the scope of this study will remain in the Canadian context.  
+In Canada, it is the federal government which funds the provinces to provide healthcare services. Applications to open a SCS are made by individuals who feel that the community is in need, as well as by municipalities like the City of Toronto. Due to the Canadian laws against the distribution of drug paraphernalia, it is required that these sites receive an exemption to all applicable laws, which is granted on an application-basis [@canada_2021; @city_of_toronto_2022]. From there, the provinces are responsible for allocating federal funding to these sites. Due to the varying influence of each level of government on the creation and facilitation of safe injection sites, content from governments at the municipal, provincial and federal levels will be studied. These will be the Governments of Canada and Ontario, and the City of Toronto.
 
-The use of natural language processing in analyzing text data has become increasingly popular in recent years due to its ability to quickly and accurately process large amounts of text data. Sentiment analysis, in particular, is a widely used method for identifying the underlying emotional tone of text, which can be used to evaluate the positivity or negativity of a particular message or viewpoint. In the context of government websites, sentiment analysis can help identify whether the content is presented in a positive, negative, or neutral manner.
+The use of natural language processing in analyzing text data has become increasingly popular in recent years due to its ability to process text data, and has been expanding to the realm of social sciences as a method to rapidly analyze and label written material [@storopoli_2019]. Topic modelling, and sentiment analysis, in particular are widely used methods for identifying the underlying topics and emotional tone of text. Data was collected from easily accessible websites published by governments and grouped by level. To begin this analysis, the contents and associated sentiments of the data at each level were analyzed. This was followed by topic modelling to identify the number of topics identified per collected level, concluding this analysis with an evaluation of these topics. Next, this paper moves on to discuss findings, limitations and next steps. This paper aims to shed light on the potential deficits that may exist in the information presented to the public related to SCS.
 
-By analyzing the sentiment of government website content related to safe injection sites, this paper aims to shed light on the potential biases that may exist in the information presented to the public. Such biases can have a significant impact on public perception and policy decisions regarding safe injection sites. Therefore, understanding the extent of bias in government websites is essential for informed decision-making and public health policy.
+This data investigation was done using [@citeR]. Packages used were here [@here], tidytext [@tidytext], wordcloud [@wordcloud], syuzhet [@syuzhet] as part of sentimentr [@sentimentr], knitr [@knitr], topicmodels [@topicmodels], tm [@tm], ldatuning [@ldatuning], rvest [@rvest], xml2 [@xml2], pdftools [@pdftools] and tidyverse [@tidyverse].
 
 
 # Data
+## Data Origins and Methodology
+An emphasis was put on availability in the collection of this data, as this paper aims to investigate the varying resources by government level of information made accessible to the public. Searches for websites were made on Google, as well as on each level of government's own websites using searches "safe injection (site)" and "supervised consumption (site)". From the City of Toronto, these sites included sites titled *(Toronto Public Health submits application to continue providing supervised injection and treatment services)* [@city_of_toronto_2018], *(Supervised Consumption Services)* [@city_of_toronto_2022], and *(Consumption & Treatment Services (CTS) Inspection Program)* [@city_of_toronto_2023]. From the Ontario Government, this included the sole document titled *(Consumption and Treatment Services: Application Guide)* [@government_of_ontario_2018]. From the Government of Canada, this included a website called *(Supervised consumption explained: types of sites and services)* [@canada_2023] and a legal website called *(Subsection 56(1) class exemption in relation to urgent public health need sites in the provinces and territories)* [@canada_2023].
+
+These sources were web scraped of all data, which was then cleaned of symbols and punctuation using natural expressions. Data collected from the same level of government was grouped together to prepare for natural language processing. 
+
 ## Data visualisation
 
+Without removing stop words, three word clouds were made — one for content from each level of government. City of Toronto data is visualized in @fig-figure1, Government of Ontario's is in @fig-figure2 and Government of Canada's is in @fig-figure3.
+
 ```{r, tidy = TRUE, message=FALSE, echo=FALSE}
+#| label: fig-figure1
+#| fig-cap: "Word cloud generated from content from City of Toronto content on supervised consumption sites."
 
 #loading cleaned data
 library(here)
@@ -75,6 +84,8 @@ tor_cloud <- wordcloud(words = tor_tidy_text$word, freq = tor_tidy_text$freq, ma
 ```
 
 ```{r, tidy = TRUE, message=FALSE, echo=FALSE}
+#| label: fig-figure2
+#| fig-cap: "Word cloud generated from Government of Ontario content on supervised consumption sites. Note that due to a lack of available resources, this cloud is generated just from a policy form on application for establishing an SCS."
 # Remove punctuation and numbers, and convert to lowercase
 on_tidy_text <- on_str %>%
     tolower() %>%
@@ -93,6 +104,8 @@ tor_cloud <- wordcloud(words = on_tidy_text$word, freq = on_tidy_text$freq, max.
 ```
 
 ```{r, tidy = TRUE, message=FALSE, echo=FALSE}
+#| label: fig-figure3
+#| fig-cap: "Word cloud generated from content from Government of Canada on supervised consumption sites."
 # Remove punctuation and numbers, and convert to lowercase
 can_tidy_text <- can_str %>%
     tolower() %>%
@@ -110,8 +123,13 @@ can_tidy_text <- can_str %>%
 can_cloud <- wordcloud(words = can_tidy_text$word, freq = can_tidy_text$freq, max.words = 100, random.order = FALSE, rot.per = 0.35, colors = brewer.pal(8, "Dark2"))
 
 ```
+From these word clouds, we see many overlapping terms between levels, however there is noticeably a different emphasis on topics surrounding SCS. In the Toronto cloud, it appears there is reference to geography, such as street names and to days of the week, suggesting discussion on logistics of using an SCS. There are also health-related terms. In the Ontario cloud, it appears the words are more formal, however this should be expected given the data is from a policy form. In the Canada cloud, the language is noticeably more legal, but still there are references to practical information. In all clouds, it is evident that stop words such as "and" and "to" were the most prevalent, which was to be expected.
+
+Next, in a high level view of the data, at each level of government, sentiment analysis was performed to evaluate the overall tone of the content provided. Sentiment analysis of single words is bounded between -1 and 1 with higher scores representing more positive sentiments and lower scores being more negative. When the sentiment of a long piece of text is calculated, it is taken as a sum of all sentiment scores designated. The sentiment scores are given in @tbl-table1. From the table, we see that the Government of Ontario content was the most strongly positive with regards to sentiment, and the City of Toronto's being the least so. 
 
 ```{r, tidy = TRUE, message=FALSE, echo=FALSE}
+#| label: tbl-table1
+#| tbl-cap: "Sentiment scores across levels of government tabulated."
 #sentiment analysis table
 
 library(syuzhet)
@@ -130,6 +148,12 @@ kable(sentiment_table, format = "html", align = rep("c", 3), caption = "Sentimen
 
 
 # Model
+
+A topic modelling approach was developed using the Latent Dirichlet Allocation (LDA) algorithm to extract meaningful topics from textual data. Three models were created (one for each level of government). First, stop words were removed using the "english" dictionary. Although stop words contain meaningful information in the context of a model, knowing the intended use of this model was to evaluate topics and not to for predictive purposes, removing stop words was chosen to provide more easily interpreble topics to a human reader. Next, text was preprocessed into a corpus, which was subsequently used to generate a document-term matrix, and sparse terms were removed. 
+
+To determine the optimal number of topics for each document, the @cao_2009 and @deveaud_2014 metrics were used in tandem on models ranging from 2-20 topics each to evaluate performance (view Appendix\label{sec:appendix}). A metric-based model selection approach was useful here due to the limited data so as not to lose training data to a test/train split. Topic number was chosen based on which models were identified to have the strongest scores of both density and coherence, respectively. This metric-based method revealed that 6 topics were ideal for the Toronto model and 2 topics were ideal for both the Ontario and Canada models. Gibbs sampling was selected for these models. The resulting topics were extracted using terms and were used to understand the most relevant themes in each document.
+
+Models are described by top words across topics in @tbl-table2 (Toronto model), @tbl-table3 (Ontario model) and @tbl-table4 (Canada model).
 
 ```{r, echo=FALSE, results='hide'}
 #tor_model
@@ -162,12 +186,14 @@ tor_top_words
 ```
 
 ```{r, echo = FALSE}
+#| label: tbl-table2
+#| tbl-cap: "Top 10 words identified across the Toronto model"
 # Convert the matrix to a data frame and assign column names
 tor_word_df <- as.data.frame(tor_top_words)
 colnames(tor_word_df) <- c("Topic 1", "Topic 2", "Topic 3", "Topic 4", "Topic 5", "Topic 6")
 
 # Create a table with kable
-kable(tor_word_df, format = "html", align = rep("c", 3), caption = "Top 10 words for each topic")
+kable(tor_word_df, format = "html", align = rep("c", 3))
 ```
 
 ```{r, echo=FALSE, results='hide'}
@@ -195,11 +221,13 @@ on_top_words
 ```
 
 ```{r, echo=FALSE}
+#| label: tbl-table3
+#| tbl-cap: "Top 10 words identified across the Ontario model"
 on_word_df <- as.data.frame(on_top_words)
 colnames(on_word_df) <- c("Topic 1", "Topic 2")
 
 # Create a table with kable
-kable(on_word_df, format = "html", align = rep("c", 3), caption = "Top 10 words for each topic")
+kable(on_word_df, format = "html", align = rep("c", 3),)
 ```
 
 ```{r, tidy = TRUE, message=FALSE, echo=FALSE, results='hide'}
@@ -222,17 +250,19 @@ all_zeros <- apply(can_dtm, 1, function(x) all(x == 0))
 can_dtm <- can_dtm[!all_zeros, ]
 
 # Train an LDA model on the document-term matrix
-can_model <- LDA(can_dtm, k = 4, method = "Gibbs")
+can_model <- LDA(can_dtm, k = 2, method = "Gibbs")
 can_top_words <- terms(can_model, 10)
 can_top_words
 ```
 
 ```{r, echo=FALSE}
+#| label: tbl-table4
+#| tbl-cap: "Top 10 words identified across the Canada model"
 can_word_df <- as.data.frame(can_top_words)
-colnames(can_word_df) <- c("Topic 1", "Topic 2", "Topic 3", "Topic 4")
+colnames(can_word_df) <- c("Topic 1", "Topic 2")
 
 # Create a table with kable
-kable(can_word_df, format = "html", align = rep("c", 3), caption = "Top 10 words for each topic")
+kable(can_word_df, format = "html", align = rep("c", 3))
 ```
 
 
@@ -240,27 +270,35 @@ kable(can_word_df, format = "html", align = rep("c", 3), caption = "Top 10 words
 
 
 # Results
+From the insights provided by the models, topics were analyzed. 
+In the Toronto model, topics were highly varied seeming to focus on supervised consumption services and related topics, such as supervision, street phones, and Toronto's drug center. Other topics related to health services and referrals had an emphasis on community support and outreach. Moreover, topics discussed social services and reducing drug use, with a focus on outreach to specific populations, such as those living on the street. There were also key words in topics centered on injection practices, overdoses, and statistics related to these issues. There is a topic related to reducing harm and overdose prevention, with a focus on individuals' lives and benefits. Finally, topics seemed to discuss the geographic location of safe injection sites and related services. 
+
+At the provincial level, Topic 1 appears to be related to healthcare services and treatment options, including local requirements for clients, whereas Topic 2 seems to be related to community services and support programs for clients, which may include funding and security measures.
+
+At the federal level, Topic 1 seemingly discusses information related to territorial and provincial exemptions for illegal substances, drug checking sites, and staff within public health services. Topic 2 seems to include discussions related to public health services, substance use, and drug holders, and at the federal level includes.
 
 # Discussion
-
-## First discussion point {#sec-first-point}
-
-
 ## Findings
+At the Toronto level, the focus appears to be on providing a range of services to individuals using drugs, including supervised consumption sites, health services and referrals, social services and outreach, harm reduction, and overdose prevention. The emphasis is on addressing the needs of specific populations and reducing drug use through outreach and support programs. In contrast, at the provincial level, the focus appears to be on healthcare services and treatment options, as well as funding and security measures. At the federal level, there is more discussion of public health services, substance use, and exemptions for illegal substances, as well as drug checking sites and staff within public health services.
+
+These differences in focus and emphasis have significant implications for individuals in need of information related to supervised consumption sites and related services. Depending on their location, individuals may have access to different types of services and support, and may face different requirements for accessing these services. It is important for individuals and advocates to be aware of these differences in order to better navigate the system and advocate for their needs. However, these differences also highlight the need for a more coordinated and comprehensive approach to addressing drug use and related issues at all levels of government.
 
 ## Weaknesses 
--lack of provincial data (sympolic of lack of)
+A significant weakness in this analysis, both in terms of the breadth of information to be modeled and the strengths of the models was the lack of data available. Where the Ontario and Canada models both only contained 2 topics (the minimum number allowed using the metric-based approach to selection), it is likely that there was not varied enough information to form comprehensive topic models in the data used. This weakness also points to the fact that there is not enough government information readily available for the public on SCS services. Considering the fact that SCS locations are subject to losing funding on short notice [@ziegler_2019], it is of concern that there is not more information to be accessed on the rapidly evolving landscape of harm reduction. It was shocking, particularly at the Ontario level, that no simple web-hosted information was available and a policy form had to be resorted to in order to include the province's data in this modelling approach. 
+
+Another weakness is inherent to the methodology used. Topic modelling is an unsupervised machine learning technique, and so the analysis of topics by a human based upon limited keywords is subject to much misinterpretation. Even strong models trained on ample data are typically unable to distinguish between varied contexts for written information (i.e. written for policy, as news items, or as a fact-sheet). 
 
 ## Next steps 
--apply model to future content on safe injection
--apply context-specific lexicon for sentiment analysis
--
+Future work should apply topic models in a predictive capacity on new data to observe the changing discussion around SCS. It would be useful to examine the impact of different approaches, such as the Toronto model versus other models, on outcomes such as client engagement, treatment success rates, and community perceptions. In addition, by training models on future data might reveal the changing focus on topics related to SCS. Topic modelling could even be leveraged to predict the closure of sites to help their users to prepare or voice their concerns. 
+
+Another useful development in natural language processing would be to develop a lexicon specific to Canadian government information sources on public services to be applied. In so doing, sentiment analysis could be applied directly to tokens related to safe injection and consumption practices, providing these services, legal exemptions to drug laws at SCS sites, the advocacy for safe access to controlled substances, and harm reduction in general. While these techniques are certainly not fool-proof, as in this work, they form a strong basis for analyzing the discourse around important issues. 
 
 \newpage
 
 
 # Appendix 
-#toronto model optimization
+@tbl-table5, @tbl-table6 and @tbl-table7 show the metrics calculated at each number of topics for the Toronto, Ontario and Canada models, respectively. Note that the @cao_2009 is optimized by minimizing the value, and @deveaud_2014 by maximizing.
+
 ```{r, echo=FALSE, results='hide'}
 library(ldatuning)
 tor_result <- ldatuning::FindTopicsNumber(
@@ -273,11 +311,13 @@ tor_result <- ldatuning::FindTopicsNumber(
 )
 
 #png("toronto_optimization_plot.png")
-#FindTopicsNumber_plot(result)
+#FindTopicsNumber_plot(tor_result)
 #dev.off()
 ```
 
 ```{r, echo=FALSE}
+#| label: tbl-table5
+#| tbl-cap: "Metric-based model optimization of the Toronto Model"
 kable(tor_result)
 ```
 
@@ -293,13 +333,14 @@ on_result <- ldatuning::FindTopicsNumber(
     verbose = TRUE
 )
 
-kable(on_result)
 #png("ontario_optimization_plot.png")
-#FindTopicsNumber_plot(result)
+#FindTopicsNumber_plot(on_result)
 #dev.off()
 ```
 
 ```{r, echo=FALSE}
+#| label: tbl-table6
+#| tbl-cap: "Metric-based model optimization of the Ontario Model"
 kable(on_result)
 ```
 
@@ -318,11 +359,13 @@ can_result <- ldatuning::FindTopicsNumber(
 # Extract the results as a data frame
 
 #png("canada_optimization_plot.png")
-#FindTopicsNumber_plot(result)
+#FindTopicsNumber_plot(can_result)
 #dev.off()
 ```
 
 ```{r, echo=FALSE}
+#| label: tbl-table7
+#| tbl-cap: "Metric-based model optimization of the Canada Model"
 kable(can_result)
 ```
 
