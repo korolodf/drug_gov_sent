@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repo contains my work on applying topic modelling to Canadian government and municipality data on supervised consumption sites. 
+This repo contains my work on applying topic modelling to Canadian government and municipality data on supervised consumption sites. I was interested to see what topics my models would inform me were most prevalent at each level and I analyzed them manually to discuss their significance. 
 
 ## File Structure
 
