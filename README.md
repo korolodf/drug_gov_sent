@@ -2,15 +2,12 @@
 
 ## Overview
 
-This repo provides students with a foundation for their own projects associated with *Telling Stories with Data*. You do not need every aspect for every paper and you should delete aspects that you do not need.
-
-To use this folder, click the green "Code" button", then "Download ZIP". Move the downloaded folder to where you want to work on your own computer, and then modify it to suit.
+This repo contains my work on applying topic modelling to Canadian government and municipality data on supervised consumption sites. I was interested to see what topics my models would inform me were most prevalent at each level and I analyzed them manually to discuss their significance. 
 
 ## File Structure
 
 The repo is structured as:
 
--   `input/data` contains the data sources used in analysis including the raw data.
--   `outputs/data` contains the cleaned dataset that was constructed.
--   `outputs/paper` contains the files used to generate the paper, including the Quarto document and reference bibliography file, as well as the PDF of the paper. 
+-   `input/data` contains the data sources used in analysis including the raw data. Using NLP, these are txt files. Cleaned files are grouped together based on level of government (which is why there are fewer called clean!)
+-   `outputs/paper` contains the files used to generate the paper, including the Quarto document and reference bibliography file, as well as the PDF of the paper (called paper.pdf). In this folder, you will also find images of the graphs used to optimize my model. In the paper, this information is shown in table form for easier comparison of values, however they're a nice supplementary visual.
 -   `scripts` contains the R scripts used to simulate, download and clean data.
