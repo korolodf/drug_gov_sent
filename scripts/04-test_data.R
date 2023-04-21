@@ -10,6 +10,8 @@
 
 #### Workspace setup ####
 library(tidyverse)
-# [...UPDATE THIS...]
+
+(count <- str_count(can_str, "supervised consumption")) > 0
+
 
 #### Test data ####

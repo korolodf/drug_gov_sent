@@ -1,0 +1,318 @@
+Supervised Consumption Services – City of Toronto
+                {"@context": "http://schema.org", "@type": "WebSite", "url": "https://toronto.ca", "sameAs" : [ "https://www.facebook.com/cityofto/","https://twitter.com/TorontoComms","https://youtube.com/thecityoftoronto"], "potentialAction": { "@type": "SearchAction", "target": "https://find.toronto.ca/searchblox/servlet/SearchServlet?query={srch_str}&cname=www1&", "query-input": "required name=srch_str" }}
+            
+            var jQueryMigrateHelperHasSentDowngrade = false;
+
+			window.onerror = function( msg, url, line, col, error ) {
+				// Break out early, do not processing if a downgrade reqeust was already sent.
+				if ( jQueryMigrateHelperHasSentDowngrade ) {
+					return true;
+                }
+
+				var xhr = new XMLHttpRequest();
+				var nonce = 'a4467e1331';
+				var jQueryFunctions = [
+					'andSelf',
+					'browser',
+					'live',
+					'boxModel',
+					'support.boxModel',
+					'size',
+					'swap',
+					'clean',
+					'sub',
+                ];
+				var match_pattern = /\)\.(.+?) is not a function/;
+                var erroredFunction = msg.match( match_pattern );
+
+                // If there was no matching functions, do not try to downgrade.
+                if ( typeof erroredFunction !== 'object' || typeof erroredFunction[1] === "undefined" || -1 === jQueryFunctions.indexOf( erroredFunction[1] ) ) {
+                    return true;
+                }
+
+                // Set that we've now attempted a downgrade request.
+                jQueryMigrateHelperHasSentDowngrade = true;
+
+				xhr.open( 'POST', 'https://www.toronto.ca/wp-admin/admin-ajax.php' );
+				xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+				xhr.onload = function () {
+					var response,
+                        reload = false;
+
+					if ( 200 === xhr.status ) {
+                        try {
+                        	response = JSON.parse( xhr.response );
+
+                        	reload = response.data.reload;
+                        } catch ( e ) {
+                        	reload = false;
+                        }
+                    }
+
+					// Automatically reload the page if a deprecation caused an automatic downgrade, ensure visitors get the best possible experience.
+					if ( reload ) {
+						location.reload();
+                    }
+				};
+
+				xhr.send( encodeURI( 'action=jquery-migrate-downgrade-version&_wpnonce=' + nonce ) );
+
+				// Suppress error alerts in older browsers
+				return true;
+			}
+        .recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+{
+  "@context": "http://schema.org/",
+  "type": "WebPage",
+  "url": "https://www.toronto.ca/community-people/health-wellness-care/health-programs-advice/supervised-injection-services/",
+  "about":   {
+    "@type": "LocalBusiness",
+    "name": "Supervised Injection Services",
+    "address":     {
+      "@type": "PostalAddress",
+      "telephone": "416-392-0520"
+    }
+  },
+  "keywords":   [
+    "special purpose bodies",
+    "boards of health",
+    "harm reduction",
+    "public health",
+    "services",
+    "emergency medical services",
+    "Toronto"
+  ]
+}
+
+
+	Skip to content
+	
+	
+	
+		
+					
+			
+				
+		I want to...
+		Navigation Menu
+	
+		
+			
+
+			  
+				
+					
+						Search
+						
+						
+				
+				Increase text sizeA+
+				Decrease text sizeA-
+				I want to...
+			
+			
+		
+	
+
+
+            
+                City of Toronto
+                    Community & PeopleHealth & WellnessHealth Programs & Advice
+                    Supervised Consumption Services
+                
+            
+			
+            
+				Supervised Consumption Services
+
+				
+					Share
+					
+						
+								Share to Facebook
+							
+							
+								Share to Twitter
+							
+							
+								Share to Pinterest
+							
+							
+								Share to LinkedIn
+							
+						
+					
+					Print
+
+					
+					
+				
+            
+
+			
+				
+										
+						Toronto Public Health opened the city’s first permanent supervised consumption service on November 8, 2017. Located inside The Works at 277 Victoria Street, this life-saving health service provides a safe and hygienic environment for people to inject pre-obtained drugs under the supervision of qualified staff.
+These important health services are part of the Toronto Overdose Action Plan, which was adopted by the Board of Health in March 2017, and updated in 2019. The Toronto Overdose Action Plan outlines a comprehensive approach to the overdose crisis in our city.
+For statistics related to use of Toronto Public Health’s supervised consumption service, visit our statistics page.
+						
+
+  
+      
+        What is a Supervised Consumption Service?
+      
+      
+        Supervised consumption services are health services that provide a hygienic environment for people to inject pre-obtained drugs under the supervision of trained staff. In addition to supervised injection, individuals are provided with sterile injection supplies, education on safer injection, overdose prevention and intervention, medical and counselling services, and referrals to drug treatment, housing, income support and other services.
+International research shows that supervised consumption services reduce drug overdoses, save lives, and limit the spread of HIV and hepatitis C related to unsafe injection practices.
+
+      
+    
+    
+    
+      
+        Supervised Consumption Services Locations & Hours
+      
+      
+        Please note that the hours listed below may change. Contact the locations directly for more information.
+Last updated: September 13, 2022
+Location
+Hours
+Fred Victor
+139 Jarvis St.
+(Queen Street East/Jarvis Street)
+Phone: 416-644-3081
+Monday, 8 a.m. to 10 p.m. last call 
+Tuesday to Sunday, 7:30 a.m. to 7 p.m. last call  
+Moss Park Overdose Prevention Site
+134 Sherbourne St.
+(Queen Street East/Sherbourne Street)
+Phone: 416-546-3984Note: Last call is at staff discretion
+Tuesday to Saturday, 10:30 a.m. to 10 p.m.
+Parkdale Queen West Community Health Centre
+168 Bathurst St.
+(Bathurst Street/Queen Street West)
+Phone: 416-703-8482Note: Last call is 30 minutes before close
+Monday, 9 a.m. to 8 p.m.
+Tuesday, 9 a.m. to 8 p.m.
+Wednesday, 1 p.m. to 8 p.m.Thursday, 9 a.m. to 8 p.m.Friday, 9 a.m. to 5 p.m.
+Saturday & Sunday, 10 a.m. to 6 p.m.
+Parkdale Queen West Community Health Centre1229 Queen St. W.
+(Queen Street West/Dufferin Street)
+Phone: 416-537-2455Note: Last call is 30 minutes before close
+Monday, 9 a.m. to 8 p.m.
+Tuesday, 9 a.m. to 8 p.m.
+Wednesday, 1 p.m. to 8 p.m.
+Thursday, 9 a.m. to 8 p.m.
+Friday, 9 a.m. to 5 p.m.
+Saturday & Sunday, 10 a.m. to 6 p.m.
+Regent Park Community Health Centre
+465 Dundas St. E.
+(Dundas Street East/Parliament Street)
+Phone: 416-203-4506Note: Last call is at 4 p.m. 
+Monday, 9:30 a.m. to 4:30 p.m.
+Tuesday, 12 p.m. to 4:30 p.m.
+Wednesday, 9:30 a.m. to 4:30 p.m.
+Thursday, 9:30 a.m. to 4:30 p.m.
+Friday, 9:30 a.m. to 4:30 p.m.
+South Riverdale Community Health Centre
+KeepSIX955 Queen St. E.
+(Queen Street East/Carlaw Street)
+Phone: 416-461-1925Note: Last call is at 4 p.m.
+Monday, 9 a.m. to 5 p.m.
+Tuesday, 9 a.m. to 5 p.m.
+Wednesday, 11 a.m. to 5 p.m.
+Thursday, 9 a.m. to 5 p.m.
+Friday, 9 a.m. to 5 p.m.
+Street Health
+338 Dundas St. E.
+(Dundas Street East/Sherbourne Street)
+Phone: 416-921-8668
+Monday, 9:30 a.m. to 4:45 p.m.
+Tuesday, 11 a.m. to 4:45 p.m.
+Wednesday, 9:30 a.m. to 4:45 p.m.
+Thursday, 9:30 a.m. to 4:45 p.m.
+Friday, 9:30 a.m. to 4:45 p.m.
+Kensington Market Overdose Prevention Service
+260 Augusta(at College St.)
+Note: Last call is 30 minutes before close
+Monday to Friday, 8 a.m. to 2 p.m.
+Sunday, 8 a.m. to 2 p.m.
+Toronto Public HealthThe Works
+277 Victoria St.
+(Yonge Street/Dundas Street East)
+Phone: 416-338-7600
+Monday to Saturday, 10 a.m. to 10 p.m.
+Sunday, 11 a.m. to 5 p.m.
+Supervised Consumption Services for Shelter Users (iPHARE)
+Starting December 2020, the City will be committing $7.61 million to provide harm reduction and mental health services to shelter users in an effort to reduce the risk of opioid-related overdoses. Titled iPHARE (Integrated Prevention and Harm Reduction initiative) the program will include supervised consumption services in selected shelters, allowing shelter residents to consume drugs under trained supervision to reduce the risk of overdose.
+The sites will not be open to the public. They are for residents of the shelter only. Learn more about iPHARE.
+
+      
+    
+    
+    
+      
+        How Do These Services Work?
+      
+      
+        Clients arrive at the program with pre-obtained drugs. Clients are given sterile injecting equipment and instruction on safer injecting practices. Staff supervise injections in a room dedicated to this purpose, and intervenes in the case of any medical emergencies.
+Once the individual has injected their drugs they go to a waiting room where they continue to be observed for any negative drug reactions. They also receive information and referrals about other health and social supports and services at the agency or elsewhere in the community.
+
+      
+    
+    
+    
+      
+        What Are the Benefits of These Services?
+      
+      
+        International and Canadian research shows that supervised consumption services have benefits both for individuals using the services and for the community, including:
+Reducing the number of drug overdoses and deaths
+Reducing risk factors leading to infectious diseases such as HIV and hepatitis
+Increasing the use of withdrawal management and drug treatment services
+Connecting people with other health and social services
+Reducing the amount of publicly discarded needles
+Cost-effectiveness
+Not contributing to crime or increased drug use in the local community
+
+    
+    
+  
+  					
+				
+
+      
+    
+            
+      
+
+		
+	
+
+
+
+	
+
+
+
+
+
+
+    
+    
+			Back to Top
+		
+    
+
+
+        w3IncludeHTML(function () {
+        var scriptTag = document.createElement('script'), // create a script tag
+            firstScriptTag = document.getElementsByTagName('script')[0]; // find the first script tag in the document
+        scriptTag.src = "https://www.toronto.ca/wp-content/themes/cot/js/scripts.js";  // set the source of the script to your script
+        firstScriptTag.parentNode.insertBefore(scriptTag, firstScriptTag);
+    });
+    function translate() {new google.translate.TranslateElement({pageLanguage: 'en'}, 'translate_btn');}
+    
+
+
+

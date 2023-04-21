@@ -1,5 +1,5 @@
 ---
-title: "Sentiments on Safe Injection"
+title: "Information Shared by Municipal Governments"
 subtitle: "Analysis of Multi-Level Government Content"
 author: 
   - Finn Korol
@@ -8,19 +8,25 @@ date: "`r Sys.time()`"
 date-format: "D MMMM YYYY"
 abstract: "This paper evaluates the bias of government websites regarding safe injection sites using sentiment analysis. We analyzed website content and identified patterns of sentiment, categorizing them as positive, negative, or neutral. Our findings show varying degrees of bias, with some sites presenting a positive sentiment and others a negative sentiment, using emotionally charged language and negative framing. Biased information can influence public perception and policy decisions, highlighting the importance of accurate and unbiased information. We recommend that government websites provide unbiased information to promote informed decision-making and reduce harm caused by opioid addiction."
 format: pdf
+table-of-contents: true
 number-sections: true
 bibliography: references.bib
 ---
 
-```{r}
+```{r, tidy = TRUE, message=FALSE, echo=FALSE}
 #| include: false
 #| warning: false
 #| message: false
 
 library(tidyverse)
-library(palmerpenguins)
-```
 
+#install.packages('wordcloud')
+library(wordcloud)
+#install.packages('tm')
+library(tm)
+library(knitr)
+
+```
 
 # Introduction
 
@@ -28,30 +34,208 @@ In recent years, there has been a growing awareness of the public health crisis 
 
 Government websites are a primary source of information for citizens seeking information about safe injection sites. However, it is unclear whether these websites provide unbiased and accurate information. This paper aims to evaluate the bias of government websites regarding safe injection sites using natural language processing techniques, primarily through sentiment analysis.
 
-Due to the varying influence of each level of government on the creation and facilitation of safe injection sites, content from governments at the municipal, provincial and federal levels. These will be the government of Canada, province of Ontario, and the city of Toronto. While the war on drugs has had a substantial impact on culture of the entire North American continent, the scope of this study will remain in the Canadian context.  
+Due to the varying influence of each level of government on the creation and facilitation of safe injection sites, content from governments at the municipal, provincial and federal levels will be studied. These will be the government of Canada, province of Ontario, and the city of Toronto. While the war on drugs has had a substantial impact on culture of the entire North American continent, the scope of this study will remain in the Canadian context.  
 
 The use of natural language processing in analyzing text data has become increasingly popular in recent years due to its ability to quickly and accurately process large amounts of text data. Sentiment analysis, in particular, is a widely used method for identifying the underlying emotional tone of text, which can be used to evaluate the positivity or negativity of a particular message or viewpoint. In the context of government websites, sentiment analysis can help identify whether the content is presented in a positive, negative, or neutral manner.
 
 By analyzing the sentiment of government website content related to safe injection sites, this paper aims to shed light on the potential biases that may exist in the information presented to the public. Such biases can have a significant impact on public perception and policy decisions regarding safe injection sites. Therefore, understanding the extent of bias in government websites is essential for informed decision-making and public health policy.
 
 
-
 # Data
+## Data visualisation
 
+```{r, tidy = TRUE, message=FALSE, echo=FALSE}
 
-```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
-#| echo: false
+#loading cleaned data
+library(here)
+tor_str <- paste(readLines(here::here("inputs/data/tor_clean.txt")), collapse="\n")
+on_str <- paste(readLines(here::here("inputs/data/on_clean.txt")), collapse="\n")
+can_str <- paste(readLines(here::here("inputs/data/can_clean.txt")), collapse="\n")
+
+library(tidytext)
+library(wordcloud)
+ 
+# Download the webpage content and remove HTML tags
+ 
+# Remove punctuation and numbers, and convert to lowercase
+tor_tidy_text <- tor_str %>%
+    tolower() %>%
+    #removePunctuation() %>%
+    #removeNumbers() %>%
+    strsplit(" ") %>%
+    unlist() %>%
+    data.frame(word = .) %>%
+    filter(word != "") %>%
+    group_by(word) %>%
+    summarise(freq = n()) %>%
+    arrange(desc(freq))
+
+# Create wordcloud
+tor_cloud <- wordcloud(words = tor_tidy_text$word, freq = tor_tidy_text$freq, max.words = 100, random.order = FALSE, rot.per = 0.35, colors = brewer.pal(8, "Dark2"))
+```
+
+```{r, tidy = TRUE, message=FALSE, echo=FALSE}
+# Remove punctuation and numbers, and convert to lowercase
+on_tidy_text <- on_str %>%
+    tolower() %>%
+    #removePunctuation() %>%
+    #removeNumbers() %>%
+    strsplit(" ") %>%
+    unlist() %>%
+    data.frame(word = .) %>%
+    filter(word != "") %>%
+    group_by(word) %>%
+    summarise(freq = n()) %>%
+    arrange(desc(freq))
+
+# Create wordcloud
+tor_cloud <- wordcloud(words = on_tidy_text$word, freq = on_tidy_text$freq, max.words = 100, random.order = FALSE, rot.per = 0.35, colors = brewer.pal(8, "Dark2"))
+```
+
+```{r, tidy = TRUE, message=FALSE, echo=FALSE}
+# Remove punctuation and numbers, and convert to lowercase
+can_tidy_text <- can_str %>%
+    tolower() %>%
+    #removePunctuation() %>%
+    #removeNumbers() %>%
+    strsplit(" ") %>%
+    unlist() %>%
+    data.frame(word = .) %>%
+    filter(word != "") %>%
+    group_by(word) %>%
+    summarise(freq = n()) %>%
+    arrange(desc(freq))
+
+# Create wordcloud
+can_cloud <- wordcloud(words = can_tidy_text$word, freq = can_tidy_text$freq, max.words = 100, random.order = FALSE, rot.per = 0.35, colors = brewer.pal(8, "Dark2"))
 
 ```
 
+```{r, tidy = TRUE, message=FALSE, echo=FALSE}
+#sentiment analysis table
 
-```{r}
+library(syuzhet)
+tor_sentiment <- get_sentiment(tor_str)
+on_sentiment <- get_sentiment(on_str)
+can_sentiment <- get_sentiment(can_str)
 
+# Create a table with the sentiment scores
+sentiment_table <- data.frame(String = c("Toronto", "Ontario", "Canada"),
+                              Sentiment_Score = c(tor_sentiment, on_sentiment, can_sentiment))
+
+colnames(sentiment_table) <- c("Level of Origin", "Sentiment Score")
+
+kable(sentiment_table, format = "html", align = rep("c", 3), caption = "Sentiments Across All Levels of Government")
 ```
+
 
 # Model
+
+```{r, echo=FALSE, results='hide'}
+#tor_model
+library(tm)
+library(topicmodels)
+
+# Remove stopwords from the text
+stopwords <- stopwords("english")
+tor_str <- removeWords(tor_str, stopwords)
+
+
+# Convert the text into a corpus
+tor_corpus <- Corpus(VectorSource(tor_str))
+
+# Create a document-term matrix
+tor_dtm <- DocumentTermMatrix(tor_corpus)
+tor_dtm <- removeSparseTerms(tor_dtm, sparse = 0.99)
+
+#evaluating
+
+all_zeros <- apply(tor_dtm, 1, function(x) all(x == 0))
+tor_dtm <- tor_dtm[!all_zeros, ]
+
+# Train an LDA model on the document-term matrix
+tor_model <- LDA(tor_dtm, k = 6, method = "Gibbs")
+tor_top_words <- terms(tor_model, 10)
+tor_top_words
+
+
+```
+
+```{r, echo = FALSE}
+# Convert the matrix to a data frame and assign column names
+tor_word_df <- as.data.frame(tor_top_words)
+colnames(tor_word_df) <- c("Topic 1", "Topic 2", "Topic 3", "Topic 4", "Topic 5", "Topic 6")
+
+# Create a table with kable
+kable(tor_word_df, format = "html", align = rep("c", 3), caption = "Top 10 words for each topic")
+```
+
+```{r, echo=FALSE, results='hide'}
+#on_model
+
+# Remove stopwords from the text
+on_str <- removeWords(on_str, stopwords)
+
+# Convert the text into a corpus
+on_corpus <- Corpus(VectorSource(on_str))
+
+# Create a document-term matrix
+on_dtm <- DocumentTermMatrix(on_corpus)
+on_dtm <- removeSparseTerms(on_dtm, sparse = 0.99)
+
+#evaluating
+
+all_zeros <- apply(on_dtm, 1, function(x) all(x == 0))
+on_dtm <- on_dtm[!all_zeros, ]
+
+# Train an LDA model on the document-term matrix
+on_model <- LDA(on_dtm, k = 2, method = "Gibbs")
+on_top_words <- terms(on_model, 10)
+on_top_words
+```
+
+```{r, echo=FALSE}
+on_word_df <- as.data.frame(on_top_words)
+colnames(on_word_df) <- c("Topic 1", "Topic 2")
+
+# Create a table with kable
+kable(on_word_df, format = "html", align = rep("c", 3), caption = "Top 10 words for each topic")
+```
+
+```{r, tidy = TRUE, message=FALSE, echo=FALSE, results='hide'}
+#can_model
+library(topicmodels)
+# Remove stopwords from the text
+stopwords <- stopwords("english")
+can_str <- removeWords(can_str, stopwords)
+
+# Convert the text into a corpus
+can_corpus <- Corpus(VectorSource(can_str))
+
+# Create a document-term matrix
+can_dtm <- DocumentTermMatrix(can_corpus)
+can_dtm <- removeSparseTerms(can_dtm, sparse = 0.99)
+
+#evaluating
+
+all_zeros <- apply(can_dtm, 1, function(x) all(x == 0))
+can_dtm <- can_dtm[!all_zeros, ]
+
+# Train an LDA model on the document-term matrix
+can_model <- LDA(can_dtm, k = 4, method = "Gibbs")
+can_top_words <- terms(can_model, 10)
+can_top_words
+```
+
+```{r, echo=FALSE}
+can_word_df <- as.data.frame(can_top_words)
+colnames(can_word_df) <- c("Topic 1", "Topic 2", "Topic 3", "Topic 4")
+
+# Create a table with kable
+kable(can_word_df, format = "html", align = rep("c", 3), caption = "Top 10 words for each topic")
+```
+
+
 
 
 
@@ -65,22 +249,87 @@ By analyzing the sentiment of government website content related to safe injecti
 ## Findings
 
 ## Weaknesses 
+-lack of provincial data (sympolic of lack of)
 
 ## Next steps 
+-apply model to future content on safe injection
+-apply context-specific lexicon for sentiment analysis
+-
 
 \newpage
 
-\appendix
 
-# Appendix {-}
+# Appendix 
+#toronto model optimization
+```{r, echo=FALSE, results='hide'}
+library(ldatuning)
+tor_result <- ldatuning::FindTopicsNumber(
+    tor_dtm,
+    topics = seq(from = 2, to = 20, by = 1),
+    metrics = c("CaoJuan2009",  "Deveaud2014"),
+    method = "Gibbs",
+   control = list(seed = 77),
+    verbose = TRUE
+)
+
+#png("toronto_optimization_plot.png")
+#FindTopicsNumber_plot(result)
+#dev.off()
+```
+
+```{r, echo=FALSE}
+kable(tor_result)
+```
 
 
-# Additional details
+```{r, echo=FALSE, results='hide'}
+library(ldatuning)
+on_result <- ldatuning::FindTopicsNumber(
+    on_dtm,
+    topics = seq(from = 2, to = 20, by = 1),
+    metrics = c("CaoJuan2009",  "Deveaud2014"),
+    method = "Gibbs",
+   control = list(seed = 77),
+    verbose = TRUE
+)
 
+kable(on_result)
+#png("ontario_optimization_plot.png")
+#FindTopicsNumber_plot(result)
+#dev.off()
+```
+
+```{r, echo=FALSE}
+kable(on_result)
+```
+
+
+```{r, echo=FALSE, results='hide'}
+library(ldatuning)
+can_result <- ldatuning::FindTopicsNumber(
+    can_dtm,
+    topics = seq(from = 2, to = 20, by = 1),
+    metrics = c("CaoJuan2009",  "Deveaud2014"),
+    method = "Gibbs",
+   control = list(seed = 77),
+    verbose = TRUE
+)
+
+# Extract the results as a data frame
+
+#png("canada_optimization_plot.png")
+#FindTopicsNumber_plot(result)
+#dev.off()
+```
+
+```{r, echo=FALSE}
+kable(can_result)
+```
 
 \newpage
 
 
 # References
+
 
 

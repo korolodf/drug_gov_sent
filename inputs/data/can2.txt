@@ -1,0 +1,388 @@
+Subsection 56(1) class exemption in relation to urgent public health need sites in the provinces and territories - Canada.ca!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KBFUZ-C9D7G-RB8SX-GRGEN-HGMC9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"KBFUZ-C9D7G-RB8SX-GRGEN-HGMC9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="fadaf4db4bwkijqacqocaaabrfsedb4l-f-2a759a37e-clienttons-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"34","ak.cp":"780901","ak.ai":parseInt("231651",10),"ak.ol":"0","ak.cr":25,"ak.ipv":6,"ak.proto":"h2","ak.rid":"bb0eb92","ak.r":46242,"ak.a2":e,"ak.m":"dscb","ak.n":"essl","ak.bpcip":"2806:2f0:61e0:6ca4::","ak.cport":61999,"ak.gh":"23.193.172.45","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1682016139","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==OKCUG5G/8w8EjyTZrw5US/0RJNyXthwzd+L4Nnw2+p2kdLeRwjCOYdMe5sDhod53PD12SN6HDp64ZeOh15N7SwgullFbg2tGKQ64XlHz9xHzBR1e4c9aYCX0qXXsXdgdtKzkQMUmw9pdQzxj2oVUka1MoXVd1871D0tn9BQfDHFROrA7UcMf/JG2m5w818LDteDY7LDremevQfm4XY1lfwkCRz81kaY85Aek8iNB119Inf3JqE5dtV1tl6npTSknpLe9jiUKSnFTZ5UYgGiLq635qHXJTcVUraoKGgPUQXpF920gU/twP3OID9H0ezPO4/nHM6OHOt47o5A1+7mLDtL24KmNtK1vcR7Uf4tCLRW+iaQwbHW6NCDBM8RWEac8d2v7X5WgKyrDDm+r4d0y5y4jTSTc4tTwyuxTmR9c2kM=","ak.pv":"704","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);
+
+    
+
+
+
+
+    
+        
+        
+        
+
+
+
+    
+        
+        
+        
+
+    
+    
+    
+    
+        
+        
+        Skip to main content
+	Skip to "About government"
+	
+
+		
+			
+			Language selection
+    
+        
+            
+                    
+                        
+                            Français
+                            fr
+                        
+                        
+                    
+                
+                
+                
+            
+    
+
+					
+                    
+					
+						
+						
+							 /
+								
+								Gouvernement du Canada
+							
+						
+					
+					
+				Search
+					
+
+	
+		Search Canada.ca
+		
+			
+	
+	Search
+	
+
+
+				
+	
+	
+		
+        
+        Menu
+		Main Menu 
+		Jobs and the workplace
+	Immigration and citizenship
+	Travel and tourism
+	Business and industry
+	Benefits
+	Health
+	Taxes
+	Environment and natural resources
+	National security and defence
+	Culture, history and sport
+	Policing, justice and emergencies
+	Transport and infrastructure
+	Canada and the world
+	Money and finances
+	Science and innovation
+
+		
+		
+		
+    
+	
+		You are here:Canada.ca
+Departments and agencies
+Health Canada
+Health Concerns
+Controlled Substances and Precursor Chemicals
+Policy and Regulations
+List of class exemptions and related guidance
+
+
+    
+
+
+
+    
+
+
+
+
+	
+
+
+
+    
+    
+
+    
+    
+        
+
+    
+Subsection 56(1) class exemption in relation to urgent public health need sites in the provinces and territories
+
+
+
+
+
+
+
+
+    Definitions
+Except as provided below, the terms used in this exemption have the same meaning as those provided in the Controlled Drugs and Substances Act (CDSA) and its regulations.
+The following definitions apply to this exemption:
+Client means an individual who is at the UPHNS to consume illegal substances, to have substances administered by another client and/or to receive other services;
+Designated person means the person identified to the provincial or territorial Minister of Health and agreed upon by the provincial or territorial Minister of Health, as the person responsible for operations and staff members at the UPHNS;
+Drug checking means a service where substances, which may be illegal substances, are tested at the UPHNS or offsite by a Health Canada laboratory, licensed dealer, section 56.1 exemption holder, or subsection 56(1) exemption holder, to determine their purity and/or content;
+Health Canada laboratory means any analytical laboratory operated by Health Canada.
+Illegal substance means a controlled substance or precursor that is obtained in a manner not authorized under the CDSA or its regulations;
+Licensed dealer means the holder of a valid controlled substances dealer's licence issued under the Narcotic Control Regulations, the Benzodiazepines and Other Targeted Substances Regulations, Part G of the Food and Drug Regulations, and/or Part J of the Food and Drug Regulations;
+Minister means the federal Minister of Mental Health and Addictions and Associate Minister of Health;
+Staff member means an individual employed by or under contract with a healthcare or community-based organization to work at the UPHNS;
+Section 56.1 exemption holder means the holder of a valid section 56.1 exemption authorizing activities, including drug checking, at a supervised consumption site;
+Subsection 56(1) exemption holder means the holder of a valid subsection 56(1) exemption authorizing drug checking activities involving illegal substances;
+Urgent public health need (UPHN) means an urgent health need in a province or territory that is in regards to opioid-related overdose deaths and hazards related to adulterated illegal substances; and
+Urgent public health need site (UPHNS) means a location that is operating pursuant to an agreement with the provincial or territorial Minister of Health of in order to address the UPHN, and where a client can bring their own illegal substances for consumption.
+Scope of the Exemption
+Pursuant to subsection 56(1) of the CDSA, and, in particular to respond to the impact of the overdose crisis on people who use drugs, the following classes of persons are hereby exempted from the following provisions of the CDSA and its regulations when engaging in certain activities in relation to an illegal substance within a supervised and controlled environment as specified below:
+Designated persons and staff members are exempted, while they are within the interior boundaries of the UPHNS, or when transporting illegal substances from a UPHNS to a Health Canada laboratory, a licensed dealer, a section 56.1 exemption holder or a subsection 56(1) exemption holder for drug-checking purposes, from the following provisions of the CDSA and its regulations with respect to any illegal substance in the possession of a client or that is left behind by a client within the interior boundaries of the UPHNS, if such possession, production, transport, or transfer is to fulfill their functions and duties in connection with the operation of the UPHNS:
+    subsections 4(1), 5(1), 5(2) and 7(1) of the CDSA, and
+      subsections 6(1) and 6(2) of the Precursor Control Regulations (PCR); and
+    
+  Clients are exempted, while they are within the interior boundaries of the UHPNS, from the following provisions of the CDSA and its regulations with respect to an illegal substance, if the possession, production, administration or transfer is for the purposes of drug checking, disposal, assisting consumption or self-consumption:
+    subsections 4(1), 5(1), 5(2) and 7(1) of the CDSA, and
+      subsections 6(1) and 6(2) of the PCR.
+    
+Terms and Conditions
+The exemption is applicable only if the following conditions are met:
+The provincial or territorial Minister of Health is responsible for the operation of each UPHNS such that it addresses the UPHN;
+  The provincial or territorial Minister of Health is responsible for ensuring that each UPHNS is, and continues to be, in compliance with other applicable federal, provincial and municipal legislation to maintain public health and public safety;
+  The provincial or territorial Minister of Health is responsible for ensuring that policies and procedures are in place regarding the possession, production, administration, transport, and transfer of illegal substances at each UPHNS;
+  The provincial or territorial Minister of Health is responsible for ensuring that a designated person is overseeing the operations of each UPHNS;
+  The provincial or territorial Minister of Health is responsible for ensuring that staff members are informed and trained on their roles and responsibilities;
+  The provincial or territorial Minister of Health is responsible for ensuring that each UPHNS has policies and procedures in place to prevent drug trafficking activities within the UPHNS that are not otherwise authorized under this exemption;
+  The provincial or territorial Minister of Health is responsible for ensuring that each UPHNS has policies or procedures in place to address any amount of 'unidentified substance' that may be an illegal substance, that has been left behind by clients at the UPHNS, including notifying local law enforcement within 24 hours of the occurrence for them to pick up the unidentified substance for disposal;
+  The provincial or territorial Minister of Health is responsible for ensuring that each UPHNS maintains engagement with the community and other service providers impacted by the UPHNS. This engagement could include outreach to organizations such as school boards, childcare providers, business associations and other local community groups. Any concerns raised should be documented and where appropriate, the UPHNS should implement relevant mitigation strategies in response to concerns raised;
+  In accordance with any applicable privacy laws, the provincial or territorial Minister of Health will provide the Minister, upon request, with access to any relevant data gathered or collected related to each UPHNS;
+  The provincial or territorial Minister of Health will provide the Minister, with a record of all of the UPHNS operating within the province within 5 days of a site opening, including the following information for each UPHNS:
+    the name of the UPHNS,
+      the area where the UPHNS will be located,
+      the type of services being offered in relation to illegal substances at the UPHNS, and
+      the date the UPHNS became operational.
+    
+  In accordance with any applicable privacy laws, the provincial or territorial Minister of Health will provide the Minister with a quarterly report to the Office of Controlled Substances summarizing, for their province, the activities undertaken and clients served at each UPHNS, the impact of the services on the clients and the community and any other information related to the services offered. The report must be submitted by the 15th of the month following the end of the quarter to exemption@hc-sc.gc.ca for the following quarters :
+    January 1- March 31;
+      April 1 - June 30;
+      July 1 -September 30; and
+      October 1- December 31.
+    The report should include, but is not limited to:
+    the total number of visits and total number of consumption visits,
+      the general demographics of the clients served, such as age, gender and race/ethnicity;
+      the number of overdoses/drug emergencies (fatal, non-fatal, and requiring naloxone administration) at the UPHNS, and
+      the number of drug checking performed at the UPHNS.
+    
+  All records or other information required to be kept under this exemption must be maintained for the duration of the exemption and made available to Health Canada upon request;
+  The provincial or territorial Minister of Health must notify the Office of Controlled Substances within 24 hours in the event of a death related to activities involving illegal substances at a UPHNS;
+  The provincial or territorial Minister of Health must notify the Office of Controlled Substances within 48 hours should a UPHNS be closed permanently, or for longer than 24 hours;
+  Designated persons and staff members may only produce an illegal substance if the production of the illegal substance is for the purposes of drug checking or disposal, as authorized under this exemption;
+  Designated persons and staff members may only transfer an illegal substance if the transfer is for the purposes of drug checking or disposal. The transfer of illegal substances cannot involve any exchanges for financial compensation, goods or services;
+  Designated persons and staff members may only transport and transfer an illegal substance from the UPHNS to a Health Canada laboratory, licensed dealer, section 56.1 exemption holder or subsection 56(1) exemption holder, if the transport and transfer is for the purpose of drug checking;
+  Designated persons and staff members may only accept an illegal substance for the purposes of drug checking from a client, or that is transported from a Health Canada laboratory, a licensed dealer, a section 56.1 exemption holder or a subsection 56(1) exemption holder, for the purposes of drug checking at the UPHNS.
+  Clients may only produce an illegal substance if the production of the illegal substance is for the purposes of self-consumption, drug checking, or the administering or transferring of an illegal substance, as authorized under this exemption;
+  Clients may only transfer an illegal substance if the transfer is for the purposes of:
+    assisting another client with the consumption of an illegal substance,
+      drug checking by a designated person or staff member or
+      being transported to a Health Canada laboratory, licensed dealer, section 56.1 exemption holder or subsection 56(1) exemption holder, for drug checking;
+    The administration and transfer of illegal substances cannot involve any exchanges for financial compensation, goods or services; and
+  
+  Clients may only administer an illegal substance if the administration is for the purpose of assisting another client with the consumption of an illegal substance. The administration of illegal substances cannot involve any exchanges for financial compensation, goods or services.
+Duration
+The exemption expires on the earliest of the following dates:
+the date on which this exemption is replaced by another exemption;
+  the date on which the exemption is revoked; or
+  September 30, 2025.
+Jennifer Saxe
+  Director General
+  Controlled Substances Directorate, Health Canada
+  For and on behalf of the Minister of Mental Health and Addictions and Associate Minister of Health
+Effective Date: July 8, 2022
+
+
+
+
+
+
+            
+
+
+    Report a problem or mistake on this page
+
+    
+    			
+			
+			
+			 
+			
+			Please select all that apply:
+                 
+                    A link, button or video is not working
+                    
+                
+                    It has a spelling mistake
+                    
+                
+                    Information is missing
+                    
+                
+                    Information is outdated or wrong
+                    
+                
+                    Login error when trying to access an account
+                    
+   					
+				    
+                    I can't find what I'm looking for
+                    
+             		
+                    Other issue not in this list
+                                     
+                   Submit
+
+        
+    
+    
+        Thank you for your help!
+You will not receive a reply. For enquiries, contact us.
+
+    
+
+
+
+    
+       	
+        
+        
+
+        Date modified:
+    2022-09-29
+
+        
+
+
+
+    
+        
+        
+        
+
+    
+    
+    
+    
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+    
+        
+        
+        
+
+
+
+    
+        
+        
+        
+
+    
+    
+    
+    
+        
+        
+        
+    About this site
+    	
+    Health Canada
+        Contact us
+        	
+        
+			
+	Government of Canada
+	All contacts
+		Departments and agencies
+		About government
+	Themes and topics
+	Jobs
+		Immigration and citizenship
+		Travel and tourism
+		Business
+		Benefits
+		Health
+		Taxes
+		Environment and natural resources
+		National security and defence
+		Culture, history and sport
+		Policing, justice and emergencies
+		Transport and infrastructure
+		Canada and the world
+		Money and finance
+		Science and innovation
+		Indigenous peoples
+		Veterans and military
+		Youth
+	
+	
+        
+        
+            
+            Government of Canada Corporate
+                Social media
+		Mobile applications
+		About Canada.ca
+                
+                Terms and conditions
+                Privacy
+                
+                    
+            
+        
+    
+
+    
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+    _satellite.pageBottom();

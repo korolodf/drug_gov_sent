@@ -1,0 +1,367 @@
+Supervised consumption explained: types of sites and services - Canada.ca!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KBFUZ-C9D7G-RB8SX-GRGEN-HGMC9",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"KBFUZ-C9D7G-RB8SX-GRGEN-HGMC9",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="fadaf4db4bwkijqacqocaaabrfsedb4i-f-4e00cee83-clienttons-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"34","ak.cp":"780901","ak.ai":parseInt("231651",10),"ak.ol":"0","ak.cr":28,"ak.ipv":6,"ak.proto":"h2","ak.rid":"bb072b3","ak.r":46242,"ak.a2":e,"ak.m":"dscb","ak.n":"essl","ak.bpcip":"2806:2f0:61e0:6ca4::","ak.cport":61997,"ak.gh":"23.193.172.45","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1682016136","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==DY2WISeuY1qpvaXzsoveAUCw5PbFH1gFobppDi/q6j0/tRM2ke1b4qdvqyOzgP2Lu/bKuyKa3H1u1eNOsqx44c0gWG+Vh6tbaR18xDzoo7lNaIx9RONdElTPAGOxk24yVITZmpNF41TBp/sQlM9ZlwcSXmM3Dh3w/kTDc7OJmOSt5m8mvdB9EGEov3ZgLLZC0vSZ4T9T6K5YgdqKQlYPUOEgdd12sRa0nBodWHtEQhFKi+OVew1/KizUstohs7pOiomnpM6RVaZ3hWvyZczlXLY2lfVz9H5IQwY33CLgsAvbVJsNDuztkzplBRBru6KGgkUFoxkoeXvMvm+kVovZrmYM/gl6EGDNtyxuWPHE1QMw6o1cd4RcHr7BiMoc8VaaSMkv/kTeBHkuCtuJ2sn7CNsdjfgfhGeN9Zqk8nFQasQ=","ak.pv":"704","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);
+
+    
+
+
+
+
+    
+        
+        
+        
+
+
+
+    
+        
+        
+        
+
+    
+    
+    
+    
+        
+        
+        Skip to main content
+	Skip to "About government"
+	
+
+		
+			
+			Language selection
+    
+        
+            
+                    
+                        
+                            Français
+                            fr
+                        
+                        
+                    
+                
+                
+                
+            
+    
+
+					
+                    
+					
+						
+						
+							 /
+								
+								Gouvernement du Canada
+							
+						
+					
+					
+				Search
+					
+
+	
+		Search Canada.ca
+		
+			
+	
+	Search
+	
+
+
+				
+	
+	
+		
+        
+        Menu
+		Main Menu 
+		Jobs and the workplace
+	Immigration and citizenship
+	Travel and tourism
+	Business and industry
+	Benefits
+	Health
+	Taxes
+	Environment and natural resources
+	National security and defence
+	Culture, history and sport
+	Policing, justice and emergencies
+	Transport and infrastructure
+	Canada and the world
+	Money and finances
+	Science and innovation
+
+		
+		
+		
+    
+	
+		You are here:Canada.ca
+Health
+Healthy living
+Substance use
+Supervised consumption sites and services
+
+
+    
+
+
+
+    
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+Supervised consumption explained: types of sites and services
+From: Health Canada
+
+
+
+        
+			
+
+
+
+    Supervised consumption services save lives and benefit communities. Supervised consumption sites provide a safe, clean space for people to bring their own drugs to use, in the presence of trained staff. This prevents accidental overdoses and reduces the spread of infectious diseases, such as HIV.
+Supervised consumption sites may offer a range of evidence-based harm reduction services, such as drug checking. The sites also provide access to important health and social services, including substance use treatment for those who are ready.
+On this page
+The benefits of supervised consumption services
+  Services offered at sites
+  What happens at supervised consumption sites
+  Urgent public health need sites
+  Find services near you
+The benefits of supervised consumptions sites and services
+Canadian and international evidence show clearly that supervised consumption services help to save  lives, connect people to social services and serve as pathways to treatment.
+When properly established, these sites  and services:
+reduce the risk of accidental overdose, because people are not rushing or using alone
+  connect people to social services like housing, employment assistance and food banks
+  provide or connect people to healthcare and treatment
+  reduce public drug use and discarded drug equipment
+  reduce spread of infectious diseases, such as HIV
+  reduce strain on emergency medical services, so they can focus on other emergencies
+  provides space for people to connect with staff and peers, which can help a person moderate their drug use and decide to pursue treatment
+Apply to set up a supervised consumption site in your community.
+Services offered at sites
+Sites are set up in areas where there are high rates of public drug use to provide important health, social and treatment services, such as:
+access to clean drug use equipment and a place to safely dispose of items, such as needles, after use
+  drug checking to detect if drugs contain other more harmful substances
+  emergency medical care in case of overdose, cardiac arrest or allergic reaction
+  basic health services, such as wound care
+  testing for infectious diseases like HIV, hepatitis C and sexually transmitted infections (STIs)
+  access to health care providers and support staff, including mental health treatment
+  education on the harms of drug use, safer consumption practices and safer sex
+  access to medications to treat opioid use disorder under the oversight of a healthcare provider
+  referrals for drug treatment, rehabilitation and other health services
+  access or referrals to social services such as housing or employment supports
+What happens at these sites
+Sites provide a safe, clean space for people to bring their own drugs to use, in the presence of trained staff.
+At a site:
+a person brings their drugs to a site to consume
+  depending on the site, drugs are injected, snorted, inhaled or consumed as pills
+  trained staff are available to help if there is an accidental overdose
+  needs of the community determine hours of operation for sites and types of services provided
+  type of staff varies by site, but generally includes nursing staff, social workers and peer and community workers
+Urgent public health need sites
+Urgent public health need sites are similar to supervised consumption sites, and provide services to reduce the harms related to drug use. They are established on a temporary basis, in order to respond to urgent needs in a specific region or community. They are also more commonly known as overdose prevention sites.
+In order to assist provincial and territorial governments in their ongoing efforts to address the effects of the opioid overdose crisis, each province and territory has been issued a subsection 56(1) class exemption from the Controlled Drugs and Substances Act in relation to urgent public health need sites. These exemptions authorize the Minister of Health in each province and territory to establish urgent public heath need sites as required within their province or territory, in accordance with the terms and conditions defined in the exemptions. It is the Minister of Health's discretion if they wish to implement the class exemption or not.
+If you are interested in operating an urgent public health need site, you should contact your provincial or territorial government regarding the subsection 56(1) class exemption that is applicable to you.
+Alternatively, if your Minister of Health is not establishing any urgent public health need sites in your province or territory, you may apply to set one up in your community by emailing exemption@hc-sc.gc.ca.
+Find services near you
+Visit the interactive map to find supervised consumption sites and services in your area.
+For more information
+  
+    Learn more about substance use, opioids and the Government of Canada's approach to addressing the crisis:
+    About safer supply services and their benefitsSafer supply services
+      What are opioids exactly, what is the opioid crisis, how to get help and respond to an overdoseThe facts about opioids and the opioid crisis
+      Help phone lines, referrals services, and free health support by province and territoryGet help with substance use
+      Help is available, whether you need it for yourself, a friend, or a family memberLearn the signs and symptoms of an overdose and how to get help
+      Naloxone is a fast-acting drug used to temporarily reverse the effects of opioid overdosesLearn about Naloxone
+      The Good Samaritan Drug Overdose Act applies to anyone seeking emergency support during an overdose, including the person experiencing an overdoseAbout the Good Samaritan Drug Overdose Act
+      What is stigma and why does it matterEnd the stigma
+    
+
+
+
+        
+        
+
+
+    Report a problem or mistake on this page
+
+    
+    			
+			
+			
+			 
+			
+			Please select all that apply:
+                 
+                    A link, button or video is not working
+                    
+                
+                    It has a spelling mistake
+                    
+                
+                    Information is missing
+                    
+                
+                    Information is outdated or wrong
+                    
+                
+                    Login error when trying to access an account
+                    
+   					
+				    
+                    I can't find what I'm looking for
+                    
+             		
+                    Other issue not in this list
+                                     
+                   Submit
+
+        
+    
+    
+        Thank you for your help!
+You will not receive a reply. For enquiries, contact us.
+
+    
+
+
+
+    
+       	
+        
+        
+
+        Date modified:
+    2023-02-08
+
+    
+
+
+
+    
+        
+        
+        
+
+    
+    
+    
+    
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+    
+        
+        
+        
+
+
+
+    
+        
+        
+        
+
+    
+    
+    
+    
+        
+        
+        
+    About this site
+    	
+    Health Canada
+        Contact us
+        	
+        
+			
+	Government of Canada
+	All contacts
+		Departments and agencies
+		About government
+	Themes and topics
+	Jobs
+		Immigration and citizenship
+		Travel and tourism
+		Business
+		Benefits
+		Health
+		Taxes
+		Environment and natural resources
+		National security and defence
+		Culture, history and sport
+		Policing, justice and emergencies
+		Transport and infrastructure
+		Canada and the world
+		Money and finance
+		Science and innovation
+		Indigenous peoples
+		Veterans and military
+		Youth
+	
+	
+        
+        
+            
+            Government of Canada Corporate
+                Social media
+		Mobile applications
+		About Canada.ca
+                
+                Terms and conditions
+                Privacy
+                
+                    
+            
+        
+    
+
+    
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+    _satellite.pageBottom();

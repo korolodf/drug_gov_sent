@@ -1,0 +1,206 @@
+Toronto Public Health submits application to continue providing supervised injection and treatment services – City of Toronto
+                {"@context": "http://schema.org", "@type": "WebSite", "url": "https://toronto.ca", "sameAs" : [ "https://www.facebook.com/cityofto/","https://twitter.com/TorontoComms","https://youtube.com/thecityoftoronto"], "potentialAction": { "@type": "SearchAction", "target": "https://find.toronto.ca/searchblox/servlet/SearchServlet?query={srch_str}&cname=www1&", "query-input": "required name=srch_str" }}
+            
+            var jQueryMigrateHelperHasSentDowngrade = false;
+
+			window.onerror = function( msg, url, line, col, error ) {
+				// Break out early, do not processing if a downgrade reqeust was already sent.
+				if ( jQueryMigrateHelperHasSentDowngrade ) {
+					return true;
+                }
+
+				var xhr = new XMLHttpRequest();
+				var nonce = '7e59cc65dd';
+				var jQueryFunctions = [
+					'andSelf',
+					'browser',
+					'live',
+					'boxModel',
+					'support.boxModel',
+					'size',
+					'swap',
+					'clean',
+					'sub',
+                ];
+				var match_pattern = /\)\.(.+?) is not a function/;
+                var erroredFunction = msg.match( match_pattern );
+
+                // If there was no matching functions, do not try to downgrade.
+                if ( typeof erroredFunction !== 'object' || typeof erroredFunction[1] === "undefined" || -1 === jQueryFunctions.indexOf( erroredFunction[1] ) ) {
+                    return true;
+                }
+
+                // Set that we've now attempted a downgrade request.
+                jQueryMigrateHelperHasSentDowngrade = true;
+
+				xhr.open( 'POST', 'https://www.toronto.ca/wp-admin/admin-ajax.php' );
+				xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+				xhr.onload = function () {
+					var response,
+                        reload = false;
+
+					if ( 200 === xhr.status ) {
+                        try {
+                        	response = JSON.parse( xhr.response );
+
+                        	reload = response.data.reload;
+                        } catch ( e ) {
+                        	reload = false;
+                        }
+                    }
+
+					// Automatically reload the page if a deprecation caused an automatic downgrade, ensure visitors get the best possible experience.
+					if ( reload ) {
+						location.reload();
+                    }
+				};
+
+				xhr.send( encodeURI( 'action=jquery-migrate-downgrade-version&_wpnonce=' + nonce ) );
+
+				// Suppress error alerts in older browsers
+				return true;
+			}
+        .recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+
+	Skip to content
+	
+	
+	
+		
+					
+			
+				
+		I want to...
+		Navigation Menu
+	
+		
+			
+
+			  
+				
+					
+						Search
+						
+						
+				
+				Increase text sizeA+
+				Decrease text sizeA-
+				I want to...
+			
+			
+		
+	
+
+
+            
+                City of Toronto
+                    Media RoomNews Releases & Other Resources
+                    Toronto Public Health submits application to continue providing supervised injection and treatment services
+                
+            
+			
+				Toronto Public Health submits application to continue providing supervised injection and treatment services
+				
+					Share
+					
+						
+								Share to Facebook
+							
+							
+								Share to Twitter
+							
+							
+								Share to Pinterest
+							
+							
+								Share to LinkedIn
+							
+						
+					
+					Print
+
+					
+					
+				
+
+			
+			
+			
+				
+									
+					News Release
+December 14, 2018
+Toronto Public Health (TPH) has submitted an application to the new provincial Consumption and Treatment Services program, which replaces the former Supervised Injection Services program. If approved, the continuation of these services will ensure that people at risk of overdose are able to access this life-saving service, as they have since August 2017.  
+“The opioid overdose crisis is the defining health issue of our time. Supervised consumption services save lives and are an important part of the response to this crisis,” said Dr. Eileen de Villa, Toronto’s Medical Officer of Health. “We are losing family members, friends and colleagues, and must do more to address this urgent public health issue.” 
+Data from the Office of the Chief Coroner for Ontario (OCCO) confirm there were 308 opioid overdose deaths in Toronto in 2017. While data are still coming in from the OCCO for 2018, preliminary data indicate there were 111 opioid toxicity deaths in Toronto in the first six months. This number is expected to rise as the cause of more deaths is confirmed. These preliminary data show that a higher percentage of these deaths occurred among people who are experiencing homelessness compared to the rest of Ontario. Further, they show that half of all opioid deaths in Toronto occurred among people aged 25 to 44. 
+In addition, a one-year review of paramedic data found that while the downtown area of the city had 36 per cent of the total calls for suspected overdose, it had only 19 per cent of fatal calls. This could be attributed to a higher density of harm reduction services in this area, including supervised consumption services, which reinforces the need for these health services in the city. 
+“These health services provide a safer and hygienic environment for people who use drugs under the supervision of trained staff. They also reduce the spread of HIV and Hepatitis C, and public drug use,” added Dr. de Villa. 
+To date there have been more than 28,000 visits to TPH’s supervised consumption service. More than 450 overdoses were reversed and lives saved. More information, including new data from the OCCO, is available online at http://www.toronto.ca/health/overdosestats.
+Toronto is Canada’s largest city, the fourth largest in North America, and home to a diverse population of more than 2.9 million people. It is a global centre for business, finance, arts and culture and is consistently ranked one of the world’s most livable cities. For information on non-emergency City services and programs, Toronto residents, businesses and visitors can visit http://www.toronto.ca, call 311, 24 hours a day, 7 days a week, or follow us on Twitter at http://www.twitter.com/TorontoComms, on Instagram at http://www.instagram.com/cityofto or on Facebook at http://www.facebook.com/cityofto. 
+
+Lenore Bromley
+Toronto Public Health
+416-338-7974
+Lenore.Bromley@toronto.ca 
+
+										
+				
+
+
+
+        Recent Releases
+        
+                All News Releases & Other Resources
+            
+            
+                Apr 20, 2023
+                Housing Now report recommends actions to move three shovel ready sites forward, calls on all orders of government to help deliver more than 12,000 purpose-built affordable and market rental homes
+            
+            
+                Apr 20, 2023
+                City of Toronto multiplex study report recommends policy and zoning changes to permit more housing options city-wide
+            
+            
+                Apr 20, 2023
+                City of Toronto report recommends housing pledge to build 285,000 new homes by 2031
+            
+            
+                Apr 19, 2023
+                City of Toronto expects peak cherry blossom bloom to begin tomorrow across Toronto
+            
+            
+                Apr 19, 2023
+                City of Toronto releases two reports detailing progress on ambitious TransformTO Net Zero Climate Action Strategy
+            
+        
+
+		
+	
+
+
+
+	
+
+
+
+
+
+
+    
+    
+			Back to Top
+		
+    
+
+
+        w3IncludeHTML(function () {
+        var scriptTag = document.createElement('script'), // create a script tag
+            firstScriptTag = document.getElementsByTagName('script')[0]; // find the first script tag in the document
+        scriptTag.src = "https://www.toronto.ca/wp-content/themes/cot/js/scripts.js";  // set the source of the script to your script
+        firstScriptTag.parentNode.insertBefore(scriptTag, firstScriptTag);
+    });
+    function translate() {new google.translate.TranslateElement({pageLanguage: 'en'}, 'translate_btn');}
+    
+
+
+
