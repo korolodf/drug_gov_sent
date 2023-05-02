@@ -1,4 +1,4 @@
-# Topics Of Supervise Consumption across Levels of Government
+# Topics Of Supervised Consumption across Levels of Government
 
 ## Overview
 
